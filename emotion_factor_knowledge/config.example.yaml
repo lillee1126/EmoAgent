@@ -1,0 +1,42 @@
+# Paper/source facts are marked "paper". Unpublished engineering thresholds are marked "tunable".
+dataset_root: /root/autodl-tmp/nku-test/EmoSet-118K
+work_dir: /root/autodl-tmp/emoagent/efk_runs/main
+
+clip:
+  model: openai/clip-vit-large-patch14
+  batch_size: 64
+
+clustering:
+  similarity_threshold: 0.89  # paper: EmoAgent appendix example
+  min_cluster_size: 5         # paper: EmoAgent appendix
+
+pixel_filter:
+  max_dhash_hamming_distance: 2  # tunable; paper does not publish a value
+  min_unique_ratio: 0.50          # tunable; paper does not publish a value
+
+emotion_filter:
+  checkpoint: /root/autodl-tmp/emoagent/resnet50_emoset_classifier/runs/resnet50_emoset/best.pt
+  min_mean_target_probability: 0.30  # tunable
+  min_target_hit_rate: 0.50          # tunable
+
+qwen:
+  model: Qwen/Qwen2.5-VL-7B-Instruct
+  images_per_cluster: 5  # EmoEdit public Summary.py behavior
+  seed: 2024             # added for reproducibility
+
+knowledge:
+  duplicate_text_ratio: 0.90  # EmoEdit generate_json.py
+  element_types:
+    - object
+    - scene
+    - action
+    - facial_expression
+    - color_tone
+
+embedding:
+  backend: volcengine-ark
+  model: ep-20260802175844-r6z6w
+  base_url: https://ark.cn-beijing.volces.com/api/v3
+  input_type: text
+  metric: l2                    # EmoAgent appendix
+  top_k: 5                      # EmoAgent main text

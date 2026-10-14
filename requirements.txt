@@ -1,0 +1,14 @@
+# Install PyTorch for the CUDA version provided by the AutoDL image first.
+torch>=2.5,<3
+torchvision>=0.20,<1
+# Keep the Hugging Face stack on one mutually compatible, reproducible set.
+# Diffusers 0.37.1 is the first stable release line with Flux2KleinPipeline.
+huggingface-hub==0.36.0
+transformers==4.57.6
+diffusers==0.37.1
+accelerate>=1.2
+qwen-vl-utils>=0.0.10
+safetensors>=0.3.1
+Pillow>=10
+numpy>=1.24,<3
+volcengine-python-sdk[ark]>=4.0.43,<6

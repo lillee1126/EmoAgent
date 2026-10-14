@@ -1,0 +1,12 @@
+torch>=2.2,<2.7
+torchvision>=0.17,<0.22
+transformers>=4.49,<5
+accelerate>=0.34
+qwen-vl-utils>=0.0.8
+Pillow>=10.0
+numpy>=1.24,<3
+tqdm>=4.66
+volcengine-python-sdk[ark]>=4.0.43,<6
+
+# Optional fully local embedding replacement:
+# sentence-transformers>=3.0
