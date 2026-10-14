@@ -6,15 +6,21 @@
 
 ## 示例：一张原图，八种目标情绪
 
-以下图片来自同一张原图的一次示例运行
+以下图片来自同一张原图的一次示例运行。
 
-| 原图 | 愉悦（Amusement） | 愤怒（Anger） | 敬畏（Awe） |
-|---|---|---|---|
-| ![原图](examples/eg/source.png) | ![愉悦](examples/eg/amusement.png) | ![愤怒](examples/eg/anger.png) | ![敬畏](examples/eg/awe.png) |
+### 原图
 
-| 满足（Contentment） | 厌恶（Disgust） | 兴奋（Excitement） | 恐惧（Fear） | 悲伤（Sadness） |
-|---|---|---|---|---|
-| ![满足](examples/eg/contentment.png) | ![厌恶](examples/eg/disgust.png) | ![兴奋](examples/eg/excitement.png) | ![恐惧](examples/eg/fear.png) | ![悲伤](examples/eg/sadness.png) |
+<p align="center">
+  <img src="examples/eg/source.png" alt="原图" width="512">
+</p>
+
+### 情绪编辑结果
+
+| 愉悦（Amusement）                  | 愤怒（Anger）                       | 敬畏（Awe）                   | 满足（Contentment）                  |
+| ---------------------------------- | ----------------------------------- | ----------------------------- | ------------------------------------ |
+| ![愉悦](examples/eg/amusement.png) | ![愤怒](examples/eg/anger.png)      | ![敬畏](examples/eg/awe.png)  | ![满足](examples/eg/contentment.png) |
+| 厌恶（Disgust）                    | 兴奋（Excitement）                  | 恐惧（Fear）                  | 悲伤（Sadness）                      |
+| ![厌恶](examples/eg/disgust.png)   | ![兴奋](examples/eg/excitement.png) | ![恐惧](examples/eg/fear.png) | ![悲伤](examples/eg/sadness.png)     |
 
 ## 项目结构
 
